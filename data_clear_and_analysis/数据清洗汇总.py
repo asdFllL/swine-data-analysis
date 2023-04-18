@@ -32,8 +32,8 @@ ax2 = ax1.twinx()
 ax3 = ax1.twinx()
 ax4 = ax1.twinx()
 
-ax3.spines['right'].set_position(('outward', 60))
-ax4.spines['right'].set_position(('outward', 120))
+ax3.spines['right'].set_position(('outward', 45))
+ax4.spines['right'].set_position(('outward', 90))
 
 index = dataUse.index.to_list()
 img1, = ax1.plot(index, dataUse['猪价'], c = 'tab:blue')
