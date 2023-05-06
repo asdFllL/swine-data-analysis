@@ -43,3 +43,9 @@ for i in range(len(columnsList)):
 
 data1.head()
 data1.to_excel('normalization.xlsx')
+
+data2 = pd.read_excel("swine-data-analysis\data_clear_and_analysis\毛白价差.xlsx", sheet_name="Sheet1")
+data_use = pd.DataFrame(data2[['Time', '毛白价差', '白条价格']])
+data_use = data_use.set_index('Time')
+data_use = data_use.resample('M').mean()
+data_use.to_excel("swine-data-analysis\data_clear_and_analysis\毛白月份.xlsx")
